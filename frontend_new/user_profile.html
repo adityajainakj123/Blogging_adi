@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Page</title>
+  <link rel="stylesheet" href="./css/user_page.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head><style>
+  #username{
+  font-size:0.9rem;
+}
+.btn{
+  background: linear-gradient(120deg,#2980b9, #8e44ad);
+}
+
+</style>
+<body>
+  <!-- nav-bar -->
+  <nav class="navbar">
+    <!-- header -->
+    <div class="nav-center">
+      <div class="nav-header">
+
+        <a href="index.html" class="nav-logo">
+          <img src="./assets/webkriti_blog.png" alt="" class="logo_bloggify">
+          <!-- <h5>LOGO</h5> -->
+        </a>
+        <button type="button" class="btn nav-btn">
+          <i class="fas fa-align-justify"></i>
+
+        </button>
+      </div>
+      <!-- links -->
+      <div class="nav-links">
+        <div class="arrange">
+          <a href="index.html" class="nav-link" >Home</a>
+          <a href="" class="nav-link">
+        </a>
+          <!-- <a href="tag-template.html" class="nav-link">Tags
+          </a> -->
+          <!-- <a href="catagories.html" class="nav-link">Catagories</a> -->
+        </div>
+        <div class="search_side" >
+          <div>
+            <table >
+              <tr>
+                <th style="color: black;"> <input type="text" placeholder="Search By User Name" id="search" style=" width: 200px; color: black; padding: 15px; font-size: large;"></th>
+                <th> <a  href="./search_user.html" style="margin-left: 5px ;"><i class="fa fa-search  fa-2x" aria-hidden="true" id="search_icon"></i></a></th>
+              </tr>
+            </table>
+          </div>
+        </div>
+  
+        <div class="nav-link contact-link" id="logout">
+          <a href="./sign-in/sign-in.html" class="btn up">LogOut</a>
+        </div>
+
+      </div>
+
+
+    </div>
+  </nav>
+  </nav>
+  <div class="master">
+    <div class="master_wrapper">
+      <div class="wrapper">
+        <div class="left">
+          <img src="./category_images/user_image.jpg" alt="user" width="100">
+          <h4 id="username"></h4>
+        </div>
+        <div class="right">
+          <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+              <div class="data">
+                <h4>Name</h4>
+                <p id="user_name"></p>
+              </div>
+              <div class="data">
+                <h4>Email</h4>
+                <p id="user_email" style="font-size: 1rem;"></p>
+              </div>
+              <div class="data">
+                <h4>Mobile</h4>
+                <p id="phone"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects">
+            <h3></h3>
+            <div class="projects_data">
+              
+              <div class="data">
+                <h4>followers</h4>
+                <p id="followers_count" style="font-size: 1rem;">123</p>
+             </div>
+              <div class="data">
+                <h4>following</h4>
+                <p id="following_count" style="font-size: 1rem;">234</p>
+             </div>
+              <div>
+                <span id="add_blog" style="width: 30px;"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="master_vlogs">
+      <h3 style="color:rgb(113, 100, 115)"><strong>Y</strong>our <strong>B</strong>log's</h3>
+         <div id="empty_no_blog"></div>
+      <div class="vlogs-container" id="vlogs">
+        
+        </div>
+        
+        
+        
+       
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  <footer class="page-footer">
+    <p> &copy; 2022 Bloggify
+
+      <span class="footer-logo" style="color:#3c3799"> Built by Team_111
+
+      </span>
+    </p>
+
+  </footer>
+
+  <script src="./Bconnection/user_notes.js"></script>
+  <script src="./Bconnection/navbar.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

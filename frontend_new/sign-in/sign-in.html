@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title> sign-in </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<link rel="stylesheet" href="../css/alert.css">
+<style>
+  /* .alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+} */
+</style>
+<body>
+  <div id="alert">
+    
+  </div>
+  
+  <div class="center">
+    <h1>Sign-in</h1>
+    <form>
+      <div class="txt_field">
+        <input type="text" id="user_name" >
+        <span></span>
+        <label>User name</label>
+      </div>
+      <div class="txt_field">
+        <input type="text" id="user_email" >
+        <span></span>
+        <label>Email</label>
+      </div>
+      <div class="txt_field">
+        <input type="text" id="user_phone" >
+        <span></span>
+        <label>Phone Number</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" id="user_password" >
+        <span></span>
+        <label>Password</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" id="user_conf_password" >
+        <span></span>
+        <label>Confirm Password</label>
+      </div>
+      
+      <a href="../index.html">    
+          <input type="submit" id="submit_signin" value="Sign-in" onclick="signup()">
+      </a>
+      <div class="signup_link">
+        Already a member? <a href="./login.html">Login</a>
+      </div>
+    </form>
+    <script src="../Bconnection/script.js"></script>
+  </div>
+
+</body>
+
+</html>

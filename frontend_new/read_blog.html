@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read Blog</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/webkriti_blog.png" type="image/x-icon" />
+    <!-- normalize -->
+  
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <style>
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  color: white;
+  /* background: #f1f1f1; */
+}
+
+/* Header/Blog Title */
+.header1 {
+  
+  font-size: 40px;
+  text-align: center;
+
+  /* background: white; */
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   /* background-color: white; */
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  /* background: #ddd; */
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+}
+.wrapper1{
+  margin-top: 10px;
+  width: 80vw;
+    /* background-color: #fff; */
+    border-radius: 5px;
+    padding: 25px 25px 30px;
+}
+
+.wrapper{
+
+    width: 80vw;
+    /* background-color: #fff; */
+    /* border-radius: 5px; */
+    padding: 25px 25px 30px;
+   
+}
+.wrapper1 textarea{
+  width: 100%;
+    resize: none;
+}
+textarea{
+  border-radius: 5px;
+  padding: 5px 10px ;
+}
+textarea::placeholder{
+    color: #150f0f;
+    font-size: 1rem;
+  }
+  /* this will make width of scroll bar be zero */
+  textarea::-webkit-scrollbar{
+    width: 0px;
+  }
+  #add_comment_btn{
+    float: right;
+  }
+ button{
+  background:linear-gradient(#4671EA, #AC34E7); 
+  border: none;
+  color: white;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 10px;
+  
+ }
+  button:hover{
+    color: black;
+  }
+ .like_share{
+ 
+  display: flex;
+  flex-direction: row;
+  
+ }
+  .comment{
+    display: flex; 
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 20px 0px 20px;
+    overflow-wrap: anywhere;
+    border-radius: 5px;
+  }
+  #user_comment:hover{
+       color: aqua;
+  }
+  #bdescr{
+    word-break: break-word;
+  }
+    </style>
+  
+
+     
+  </head>
+  <body>
+         <!-- nav-bar -->
+         <nav class="navbar">
+          <!-- header -->
+          <div class="nav-center">
+          <div class="nav-header">
+          
+            <a href="index.html" class="nav-logo"><img src="./assets/webkriti_blog.png" class="logo_bloggify" alt=""></a>
+            <button type="button" class="btn nav-btn">
+              <i class="fas fa-align-justify"></i>
+    
+            </button>
+          </div>
+          <!-- links -->
+          <div class="nav-links">
+            <div class="arrange">
+            <a href="index.html" class="nav-link" >Home</a>
+            <a href="about.html" class="nav-link">
+              About</a>
+            <!-- <a href="tag-template.html" class="nav-link">Tags
+              </a> -->
+          </div>
+          <div class="search_side" >
+            <div>
+              <table >
+                <tr>
+                  <th style="color: black;"> <input type="text" placeholder="Search By User Name" id="search" style=" width: 200px; color: black; padding: 15px; font-size: large;"></th>
+                  <th> <a  href="./search_user.html" style="margin-left: 5px ;"><i class="fa fa-search  fa-2x" aria-hidden="true" id="search_icon"></i></a></th>
+                </tr>
+              </table>
+            </div>
+          </div>
+    
+          <div class="nav-link contact-link" >
+            <b id="sign_in"></b>
+            
+          </div>           
+            </div>
+         
+         
+        </div>
+        </nav>
+    <!-- end of nav -->
+
+    
+    <!-- main -->
+    
+
+        <main class="page">
+
+          <div class="author" style="background-color: green; ">    
+
+          </div>
+        <div class="header1 card" style="margin-bottom:0px; padding: 3px;">
+          <h3 style="margin: 0.5rem;"><span id="btitle"></span></h3>
+         
+        </div>
+        <div class="author" style="margin-right: 0px; margin-top: 0.3rem; ">
+          <span >Author : <span id="gotouserpage" ></span>  </span>
+          
+        </div>
+        <div class="row"  >
+          <div class="leftcolumn">
+            <div class="card">
+              <h4 style="margin-bottom: 0.3rem;">Tag : <span id="btag" ></span> </h4>
+              <h5 style="margin-bottom: 0.2rem;font-size: 0.8rem; float: right;">Blog Writing Date: <span id="bdate"  ></span></h5>
+              
+              <p></p>
+              <p id="bdescr" style="font-size: 1.2rem;" ></p>
+            </div>
+          </div>
+        
+        </div>
+          <div class="like_share" style="margin: 10px;">
+          
+              
+               
+               <i class="fa fa-thumbs-up" style="font-size:24px; padding-right: 5px;" id="likebtn" ></i><span id="like" style="margin-right: 10px;"></span>
+
+               <i class="fa fa-thumbs-down" style="font-size:24px;  padding-right: 5px;" id="dislike_btn"></i><span id="dislike"></span>
+            
+          
+           
+          </div>
+          
+        
+        <div class="wrapper1">
+                <!-- <h5>comment</h5> -->
+                <textarea placeholder="Add Comment ..." id="comment_Desc_add"></textarea>
+             <button id="add_comment_btn">ADD</button>
+            </div>
+<!-- <span id="all_comments"> -->
+            <div class="comments">
+              <h5>Comments</h5>
+              <span id="all_comments">
+                
+              </span>
+          </div>
+          
+ </main>
+ <script>
+  const textarea1 = document.querySelector("textarea");
+  textarea1.addEventListener("keyup", e =>{
+    textarea1.style.height = "63px";
+    let scHeight = e.target.scrollHeight;
+    textarea1.style.height = `${scHeight}px`;
+  });
+</script>
+    <footer class="page-footer">
+      <p>    &copy; 2022 Simply_vlogs
+      
+      <span class="footer-logo" style="color:blue"> Built by Team_111
+
+      </span></p>
+            
+    </footer>
+</body>
+<script src="./js/app.js"></script>  
+<script src="./Bconnection/single_blog.js"></script>
+<script src="./Bconnection/navbar.js"></script>
+<script>
+  const textarea = document.querySelector("textarea");
+  textarea.addEventListener("keyup", e =>{
+    textarea.style.height = "63px";
+    let scHeight = e.target.scrollHeight;
+    textarea.style.height = `${scHeight}px`;
+  });
+</script>
+  </body>
+</html>

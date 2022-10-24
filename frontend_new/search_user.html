@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>specific user</title>
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="shortcut icon" href="./assets/webkriti_blog.png" type="image/x-icon" />
+	<link rel="stylesheet" href="./css/user_page.css">
+  <link rel="stylesheet" href="./css/main.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<style>
+  #container{
+    color: blue;
+    font-size: 5rem;
+    text-align: center;
+    align-items: center;
+    margin: 11%;
+    display: none;
+  }
+  #bdesc{
+    word-break: break-word;
+  }
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  /* color: white; */
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button4 {
+  background-color: black;
+  color: white;
+  border: 2px solid #e7e7e7;
+  border-radius: 20px;
+}
+.button:hover{
+  /* transform: scaleY(1.5); */
+  transform: rotate(5deg);
+}
+#follow_btn{
+  background-color: rgb(48, 48, 234);
+}
+</style>
+<body>
+
+   <!-- nav-bar -->
+   <nav class="navbar">
+    <!-- header -->
+    <div class="nav-center">
+    <div class="nav-header">
+    
+      <a href="index.html" class="nav-logo"><img src="./assets/webkriti_blog.png" class="logo_bloggify" alt=""></a>
+      <button type="button" class="btn nav-btn">
+        <i class="fas fa-align-justify"></i>
+
+      </button>
+    </div>
+    <!-- links -->
+    <div class="nav-links">
+      <div class="arrange">
+      <a href="index.html" class="nav-link" >Home</a>
+      <a href="" class="nav-link">
+        </a>
+      <!-- <a href="tag-template.html" class="nav-link">Tags
+        </a> -->
+    </div>
+    <div class="search_side" >
+      <div>
+        <table >
+          <tr>
+            <th style="color: black;"> <input type="text" placeholder="Search By User Name" id="search" style=" width: 200px; color: black; padding: 15px;"></th>
+            <th> <a  href="./search_user.html" style="margin-left: 5px ;"><i class="fa fa-search  fa-lg" aria-hidden="true" id="search_icon"></i></a></th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="nav-link contact-link" >
+      <b id="sign_in"></b>
+      
+    </div>           
+      </div>
+   
+   
+  </div>
+  </nav>
+
+  <div id="container"></div>
+  <div id="second_con">
+<div class="master">
+  <div class="master_wrapper">
+<div class="wrapper" >
+    <div class="left" >
+        <img src="./category_images/user_image.jpg" 
+        alt="user" width="100">
+        <h4  id="username"></h4>
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+              <div class="data">
+                <h4 >Name</h4>
+                <p id="user_name"></p>
+             </div>
+                 <div class="data">
+                    <h4 >Email</h4>
+                    <p id="user_email" style="font-size: 1rem;"></p>
+                 </div>
+                 <div class="data">
+                  <h4>Mobile</h4>
+                   <p id="phone"></p>
+             </div>
+                 
+               
+            </div>
+        </div>
+      
+      <div class="projects">
+            <h3></h3>
+            <div class="projects_data">
+              <div class="data">
+                <h4>Followers</h4>
+                 <p id="followers"></p>
+           </div>
+           <div class="data">
+            <h4>Following</h4>
+             <p id="following"></p>
+       </div>
+       <div class="data">
+        <button class="button button4 btn6" id="follow_btn"><span id="follow_text">Following</span> </button>
+   </div>
+              
+            </div>
+            
+        </div>
+    </div>
+</div>
+</div>
+<div class="master_vlogs">
+  <h3 style="color:white"><strong>B</strong>log's</h3>
+
+<div class="vlogs-container" id="vlogs" >
+</div>
+</div>
+</div>
+</div>
+<footer class="page-footer">
+  <p>    &copy; 2022 Bloggify
+  
+  <span class="footer-logo" style="color:#3c3799"> Built by Team_111
+
+  </span></p>
+        
+</footer>
+
+<script src="./Bconnection/searchbyname.js"></script>
+<!-- <script src="./Bconnection/navbar.js"></script> -->
+<script src="./js/app.js"></script>
+</body>
+</html>

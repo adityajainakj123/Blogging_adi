@@ -1,0 +1,21 @@
+.search_side{
+    margin: auto;
+     display: grid;
+      grid-template-columns: 1fr ;
+  }
+  #search_icon{
+   padding-right: 1.2rem;
+   cursor: pointer;
+  }
+  #search{
+       /* width: 50%; */
+       height: 4.5vh;
+  }
+  #search_icon:hover{
+    color: aqua;
+  }
+  @media screen and (max-width : 992px){
+    .search_side table{
+      margin-top: 13px;
+    }
+  }

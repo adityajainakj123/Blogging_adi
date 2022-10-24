@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Blog</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/webkriti_blog.png" type="image/x-icon" />
+    <!-- normalize -->
+    <!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/navbar.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            /* this will enable us to resize the content only in vertical fashion */
+            resize: vertical;
+
+        }
+
+        textarea {
+            min-height: 100px;
+            border-radius: 20px;
+            color: whitesmoke;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background: linear-gradient(120deg, #2980b9, #8e44ad);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgb(20, 32, 203);
+        }
+
+        .containerb {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- nav-bar -->
+    <nav class="navbar">
+        <!-- header -->
+        <div class="nav-center">
+        <div class="nav-header">
+        
+            <a href="index.html" class="nav-logo"><img src="./assets/webkriti_blog.png" class="logo_bloggify"></a>
+          <button type="button" class="btn nav-btn">
+            <!-- <i class="fas fa-align-justify"></i> -->
+  
+          </button>
+        </div>
+        <!-- links -->
+        <!-- <div class="nav-links">
+          <div class="arrange">
+          <a href="index.html" class="nav-link" >Home</a>
+          <a href="about.html" class="nav-link">
+            About</a>
+           <a href="tag-template.html" class="nav-link">Tags
+            </a> 
+        </div> -->
+        <!-- <div class="search_side" >
+          <div>
+            <table >
+              <tr>
+                <th style="color: black;"> <input type="text" placeholder="Search By User Name" id="search" style=" width: 200px; color: black; padding: 15px; font-size: large;"></th>
+                <th> <a  href="./search_user.html" style="margin-left: 5px ;"><i class="fa fa-search  fa-2x" aria-hidden="true" id="search_icon"></i></a></th>
+              </tr>
+            </table>
+          </div>
+        </div> -->
+  
+        <!-- <div class="nav-link contact-link" >
+          <b id="sign_in"></b>
+          
+        </div>           
+          </div>
+        -->
+       
+      </div>
+      </nav>
+    <!-- end of nav -->
+    <!-- main -->
+    <div id="alert"></div>
+    <main class="page">
+
+
+        <div class="containerb">
+            <form>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">Title</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="firstname" placeholder="Title.." id="add_title">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="country">Catagory</label>
+                    </div>
+
+                    <div class="col-75">
+                        <select name="catagory" id="add_category">
+                            <option value="Lifestyle">Lifestyle</option>
+                            <option value="General">General</option>
+                            <option value="Business">Business</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Health">Health</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Write your blog</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="add_description" name="subject" placeholder="Write your blog .."
+                            style="color: black;">
+
+              </textarea>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <input type="submit" id="edit_blog" value="Edit">
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- end of main  -->
+    <footer class="page-footer">
+        <p> &copy; 2022 SimplyRecipies
+
+            <span class="footer-logo" style="color:blue"> Built by Team_111
+
+            </span>
+        </p>
+
+    </footer>
+<!-- <script src="./js/app.js"></script> -->
+<script src="./Bconnection/editBlog.js"></script>
+<!-- <script src="./Bconnection/navbar.js"></script> -->
+<script>
+    const textarea = document.querySelector("textarea");
+    textarea.addEventListener("keyup", e => {
+        textarea.style.height = "63px";
+        let scHeight = e.target.scrollHeight;
+        textarea.style.height = `${scHeight}px`;
+    });
+</script>
+
+</body>
+
+</html>

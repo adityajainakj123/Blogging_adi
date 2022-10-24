@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simply Blog || Start</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/webkriti_blog.png" type="image/x-icon" />
+  <!-- normalize -->
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/alert.css">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/navbar.css">
+</head>
+<style>
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .fa-moon {
+    color: #f1c40f;
+  }
+
+  .fa-sun {
+    color: #f39c12;
+  }
+
+  .checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+  }
+
+  .checkbox:checked+.checkbox-label .ball {
+    transform: translateX(24px);
+  }
+
+  /*  Support me if you like it */
+  .support {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .support a {
+    color: #292c35;
+    font-size: 32px;
+    backface-visibility: hidden;
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  .support a:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+<body>
+
+  <!-- nav-bar -->
+  <nav class="navbar">
+    <!-- header -->
+    <div class="nav-center">
+      <div class="nav-header">
+
+        <a href="index.html" class="nav-logo"><img src="./assets/webkriti_blog.png" class="logo_bloggify" alt=""></a>
+        <button type="button" class="btn nav-btn">
+          <i class="fas fa-align-justify"></i>
+
+        </button>
+      </div>
+      <!-- links -->
+      <div class="nav-links">
+        <div class="arrange">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">
+            About</a>
+          <!-- <a href="tag-template.html" class="nav-link">Tags
+          </a> -->
+        </div>
+        <div class="search_side">
+          <div>
+            <table>
+              <tr>
+                <th style="color: black;"> <input type="text" placeholder="Search By User Name" id="search"
+                    style=" width: 200px; color: black; padding: 15px;"></th>
+                <th> <a href="./search_user.html" style="margin-left: 5px ;"><i class="fa fa-search  fa-2x"
+                      aria-hidden="true" id="search_icon"></i></a></th>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="nav-link contact-link">
+          <b id="sign_in"></b>
+
+        </div>
+
+
+      </div>
+  </nav>
+  <div id="alert">
+
+  </div>
+  <!-- end of nav -->
+  <!-- main -->
+  <main class="page">
+    <header class="hero">
+
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1>Bloggify</h1>
+          <h4>Don't think , just write</h4>
+        </div>
+      </div>
+
+    </header>
+    <!-- end of header -->
+    <!-- recipies container -->
+    <div class="catagories-heading">
+      <h3>Top catogories</h3>
+    </div>
+    <div class="container1">
+      <input type="radio" name="dot" id="one">
+      <input type="radio" name="dot" id="two">
+      <div class="main-carda">
+        <div class="cardsa">
+          <div class="carda">
+            <a href="./catagories.html?General">
+              <div class="content" id="general">
+                <div class="img">
+                  <img src="category_images/general_images.png" alt="">
+                </div>
+                <div class="details">
+                  <div class="name">General</div>
+                  <div class="job">General Blog's</div>
+                </div>
+              </div>
+            </a>
+
+          </div>
+          <div class="carda">
+            <a href="./catagories.html?Sports">
+              <div class="content" id="sports">
+                <div class="img">
+                  <img src="category_images/sports.jpg" alt="">
+                </div>
+                <div class="details">
+                  <div class="name">Sports</div>
+                  <div class="job">Sports related Blog's</div>
+                </div>
+              </div>
+            </a>
+
+          </div>
+          <div class="carda">
+            <a href="./catagories.html?Business">
+              <div class="content" id="business">
+                <div class="img">
+                  <img src="category_images/business.jpg" alt="">
+                </div>
+                <div class="details">
+                  <div class="name">Business</div>
+                  <div class="job">Business related Blog's</div>
+                </div>
+              </div>
+          </div>
+          </a>
+
+        </div>
+        <div class="cardsa">
+          <div class="carda">
+            <a href="./catagories.html?Lifestyle">
+              <div class="content" id="lifestyle">
+                <div class="img">
+                  <img src="category_images/lifestyle.jpg" alt="">
+                </div>
+                <div class="details">
+                  <div class="name">Lifestyle</div>
+                  <div class="job">Lifestyle related Blog's</div>
+                </div>
+              </div>
+            </a>
+
+          </div>
+          <div class="carda">
+            <a href="./catagories.html?Techonology" onclick="all_blogs()">
+              <div class="content" id="techonology">
+                <div class="img">
+                  <img src="category_images/technology.jpg" alt="">
+                </div>
+                <div class="details">
+                  <div class="name">Techonology</div>
+                  <div class="job">Techonology related Blog's</div>
+                </div>
+              </div>
+            </a>
+
+          </div>
+          <div class="carda">
+            <a href="./catagories.html?Health" onclick="all_blogs()">
+              <div class="content" id="health">
+                <div class="img">
+                  <img src="category_images/health.jpg" alt="">
+                </div>
+                <div class="details">
+                  <div class="name">Health</div>
+                  <div class="job">Health Related Blog's</div>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <label for="one" class=" active one"></label>
+        <label for="two" class="two"></label>
+      </div>
+    </div>
+
+    <section class="recipes-container">
+
+      <!-- end tags container -->
+      <div class="vlogs-list-heading">
+        <div class="vlog-heading-helper">
+          <p>
+          <h3>Our Popular vlogs</h3>
+          </p>
+        </div>
+
+
+      </div>
+      <div class="recipes-list" id="blogs_cur" style="width: 100%;">
+        <!-- single recipe -->
+      </div>
+
+      <!-- end recipies container -->
+      <!-- beginning of top vlogger container -->
+
+
+      <!-- </div>
+         </div> -->
+
+    </section>
+  </main>
+
+  <div class="contact_form">
+    <div class="contact_container">
+      <div class="contact_content">
+        <div class="left-side">
+          <div class="address details">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic">Address</div>
+            <div class="text-one">Atal Bihari Vajpayee Indian Institute of Information Technology and Management</div>
+            <div class="text-two">gwalior</div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">+91 63769 85175</div>
+            <div class="text-two">+91 85447 28373</div>
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">adityajainakj123@gmail.com</div>
+            <div class="text-two">ankit@gmail.com</div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="topic-text">Send us a message</div>
+          <p>If you have any work for me or any types of quries related to Website or anything else then you can send me
+            message from here. It's my pleasure to help you.</p>
+          <form action="#">
+            <div class="input-box">
+              <input type="text" id="contact_name" placeholder="Enter your name">
+            </div>
+            <div class="input-box">
+              <input type="text" id="contact_email" placeholder="Enter your email">
+            </div>
+            <div class="input-box message-box">
+              <textarea id="contact_message" placeholder="Enter your message"></textarea>
+            </div>
+            <div class="button">
+              <input type="button" id="send_now" value="Send Now">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <!-- end of main  -->
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+      <h3>Sagar<span>Developer</span></h3>
+
+      <p class="footer-links">
+        <a href="#">Home</a>
+        |
+        <a href="#">About</a>
+        |
+        <a href="#">Contact</a>
+        |
+        <a href="#">Blog</a>
+      </p>
+
+      <p class="footer-company-name">Copyright © 2021 <strong>SagarDeveloper</strong> All rights reserved</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Ghaziabad</span>
+          Delhi</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+91 74*9*258</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:sagar00001.co@gmail.com">xyz@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>About the company</span>
+        <strong>Sagar Developer</strong> is a Youtube channel where you can find more creative CSS Animations
+        and
+        Effects along with
+        HTML, JavaScript and Projects using C/C++.
+      </p>
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="./Bconnection/contact_form.js"></script>
+  <script src="./Bconnection/all_blogs_type.js"></script>
+  <script src="./Bconnection/searchbyname.js"></script>
+  <script src="./Bconnection/navbar.js"></script>
+</body>
+<script src="./js/app.js">
+</script>
+
+</html>
