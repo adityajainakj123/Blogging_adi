@@ -102,18 +102,23 @@ router.post('/follow' , fetchuser , async(req,res)=>{
     const search_name = req.body.user_name ;
       const user_name = req.user_name ;
       const data = await client.query(`select *from users where user_name = '${search_name}' ;`)
-      const followers = data.rows[0].followers 
+      const dataof_uesr = await client.query(`select *from users where user_name = '${user_name}' ;`)
+      const following_count_of_user = dataof_uesr.rows[0].following_count;
+      const follower_count_of_user = dataof_uesr.rows[0].followers_count;
+      const follow_of_user = dataof_uesr.rows[0].followers ;
+
+      const followers = data.rows[0].followers
       const followers_count = data.rows[0].followers_count
-      const following_count = data.rows[0].followers_count
+      const following_count = data.rows[0].following_count
       if ( followers.includes(user_name)){
         let newcount = followers_count - 1 ;
-        let newcount2 = following_count - 1 ;
+        let newcount2 = following_count_of_user - 1 ;
         await client.query ( `update users set following = array_remove(following , '${search_name}') , following_count = ${newcount2} where user_name = '${user_name}' ;` )
         await client.query(`update users set followers = array_remove(followers , '${user_name}') , followers_count = ${newcount} where user_name = '${search_name}' ;`)
         return res.status(200).json({message:"you unfollowed user " , value : 1 }) ;
       }
       let newcount = followers_count + 1 ;
-      let newcount2 = following_count + 1 ;
+      let newcount2 = following_count_of_user + 1 ;
 
         await client.query ( `update users set following = following || '{${search_name}}' , following_count = ${newcount2} where user_name = '${user_name}' ;` )
         await client.query(`update users set followers = followers || '{${user_name}}' , followers_count = ${newcount} where user_name = '${search_name}' ;`)
